@@ -1,0 +1,236 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.typekit.net/osw8leo.css">
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<base target="_parent" />
+
+<style type="text/css">
+body {
+    background-image: url(https://media.d3.nhle.com/image/private/t_document/prd/pwk5g7plif9ygzqtmchu.png);
+    background-blend-mode:normal;
+    background-color:#004aa0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:middle;
+ }
+	
+p {
+    text-align: center;
+  font-size: 1.5em;
+  font-family: arpona, serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  background-color:#c8012e;
+  border-radius:5px;
+  margin: 2%;
+  letter-spacing: 1px;
+}
+
+
+.logos {
+width:100%;
+float:left;
+margin-top:-15px;
+display:block;
+vertical-align:middle;
+}
+
+.logos img{
+float:left;
+width:33.33%;
+}
+
+.versus {
+    font-family: arpona, serif;
+font-weight: 400;
+font-style: normal;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+.container {
+ width:80%;
+ position:relative;
+ margin-top:5px;
+ margin-bottom:20px;
+
+}
+
+.column {
+    width: 23%;
+    float: left;
+    position: relative;
+    margin: 0 1% 0 1%;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: zuume-cut, sans-serif;
+font-weight: 300;
+font-style: normal;
+    color: #fff;
+}
+
+.heading {
+    text-align: center;
+  font-size: 3em;
+  margin: 8px 8px 0px 8px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 {
+font-family: arpona, serif;
+font-weight: 700;
+font-style: italic;
+color:#ffffff;
+
+}
+
+.subhead {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: arpona, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    margin: 5px;
+    letter-spacing: 2px;
+}
+.button {
+  display: block;
+  font-family: arpona, serif;
+  font-weight: 700;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #cf142b;
+  color: #ffffff;
+  width: 70%;
+  font-size: 1.5em;
+  border-radius:5px;
+}
+
+.button:hover { 
+ background-color:#ed1e40;
+text-decoration:none;
+color:white;
+}
+
+.button-row {
+ width:70%;
+ position:relative;
+ padding-left:15px;
+ padding-right:15px;
+}
+
+.half-column {
+width:50%;
+float:left;
+position:relative;
+padding:0% 3%;
+}
+
+.full-column {
+ width:100%;
+ float:left;
+ position:relative;
+ padding: 0% 3%;
+margin-top:0px;
+}
+
+hr {
+  Border: 0px;
+  background-color: #004aa0;
+  padding: 1px;
+  width: 80%;
+  margin: 8px 20px;
+}
+</style>
+
+<center>
+<body style="max-width:824px;">
+<h1 class="heading">Washington Capitals Home Opener</h1>
+<h2 class="subhead">presented by&nbsp;<img src="https://media.d3.nhle.com/image/private/t_document/prd/ntfiumcywqks5knwgnh6.png" width="150px" /></h2>
+
+
+<center><hr />
+    <table width="70%">
+    <tr>
+    <td width="25%"><img src="https://assets.nhle.com/logos/nhl/svg/WSH_dark.svg"/>&nbsp;</td>
+<td width="50%"><center><h1 class="versus">Friday, October 12, 2024<br />7:00 PM <br/>Capitals vs. Devils</h1></center></td>
+<td width="25%"><img src="https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg"/>&nbsp;</td>
+</tr></table></center>
+
+<!--COUNTDOWN-->
+<div class="container">
+	<div class="column">
+		<p id="days">&nbsp;</p>
+		DAYS
+	</div>
+	<div class="column">
+		<p id="hours">&nbsp;</p>
+		HOURS
+	</div>
+	<div class="column">
+		<p id="mins">&nbsp;</p>
+		MINUTES
+	</div>
+	<div class="column">
+		<p id="secs">&nbsp;</p>
+		SECONDS
+	</div>
+	<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 12, 2024 19:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+ // Get todays date and time
+ var now = new Date().getTime();
+ 
+ // Find the distance between now an the count down date
+ var distance = countDownDate - now;
+ 
+ // Time calculations for days, hours, minutes and seconds
+ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+ var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+ var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+ // Output the result in an element with id="days"
+ document.getElementById("days").innerHTML = days;
+
+ // Output the result in an element with id="hours"
+ document.getElementById("hours").innerHTML = hours;
+
+ // Output the result in an element with id="mins"
+ document.getElementById("mins").innerHTML = minutes;
+
+ // Output the result in an element with id="secs"
+ document.getElementById("secs").innerHTML = seconds;
+
+ 
+ // If the count down is over, write some text 
+ if (distance < 0) {
+ clearInterval(x);
+ document.getElementById("demo").innerHTML = "EXPIRED";
+ }
+}, 1000);</script>
+</div>
+
+</body>
+</center>
