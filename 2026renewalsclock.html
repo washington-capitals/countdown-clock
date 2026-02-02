@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.typekit.net/ote6pql.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<base target="_parent">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/buq8rhd.css">
+
+<style>
+
+body {
+        background-color:transparent;
+        width:100%;
+    }
+
+
+h1, h2 {
+  font-weight:500;
+  letter-spacing: 0.05em;
+}
+
+.heading {
+  font-size: 25px;
+  font-family:"Industry", sans-serif;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#ffffff;
+}
+
+.container {
+   background-color:#041e42;
+    padding:10px;
+    display:block;
+    position:relative;
+    margin-left:0;
+    margin-right:0;
+    max-width:1240px;
+}
+
+.column {
+width:23%;
+float:left;
+position:relative;
+text-align: center;
+font-size: 15px;
+font-family:"industry", sans-serif;
+color:#ffffff;
+}
+
+.middle-column {
+width:30%;
+float:left;
+position:relative;
+text-align:center;  
+}
+
+@media screen and (max-width: 800px) {
+  .middle-column {
+width:100%;
+float:left;
+position:relative;
+text-align:center;  
+
+}
+}
+
+.left-column {
+  width:40%;
+  float:left;
+  position:relative;
+}
+
+@media screen and (max-width: 800px) {
+.left-column {
+  text-align:center;
+  width:100%;
+  float:left;
+  position:relative;
+padding-bottom:20px;
+}
+}
+
+.left-column p {
+  font-size:30px;
+  font-weight:bold;
+  letter-spacing:0.2em;
+  color:#ffffff;
+}
+
+.right-column {
+width:30%;
+float:right;
+position:relative;
+    text-align:right;
+}
+
+@media screen and (max-width: 800px) {
+  .right-column {
+    text-align:center;
+width:100%;
+float:left;
+position:relative;
+    
+}
+}
+
+.right-column p{
+  color:#ffffff;
+  letter-spacing:0.2em;
+
+  font-family:industry;
+  font-size:12px;
+}
+
+</style>
+</head>
+<body>
+
+        <!--COUNTDOWN-->
+<div class="container">
+<h2 class="heading">Renewal Deadline - March 15, 2026</h2>
+<div class="column"><p id="days">-</p>DAYS</div>
+<div class="column"><p id="hours">-</p>HOURS</div>
+<div class="column"><p id="mins">-</p>MINUTES</div>
+<div class="column"><p id="secs">-</p>SECONDS</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = Date.parse("Mar 15, 2025 00:00:00");
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="days"
+    document.getElementById("days").innerHTML = days;
+
+        // Output the result in an element with id="hours"
+    document.getElementById("hours").innerHTML = hours;
+
+        // Output the result in an element with id="mins"
+    document.getElementById("mins").innerHTML = minutes;
+
+            // Output the result in an element with id="secs"
+    document.getElementById("secs").innerHTML = seconds;
+
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+</div>
+
+
+
+
+
+
+
+</body></html>
